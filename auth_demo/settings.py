@@ -131,3 +131,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.EmailAuth'
 )
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_CAgs5WUykTTbkYDlFitYypb2')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_s4WjohlA7C6ORKBRp9IFk7ZX')
+
+STATICFILES_DIRS =(
+    os.path.join(BASE_DIR, 'static'),
+)
